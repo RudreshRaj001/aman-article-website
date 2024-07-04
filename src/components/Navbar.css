@@ -1,0 +1,87 @@
+/* Navbar container styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; /* Ensure background is transparent */
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Link styling */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Button styling for login and signup */
+.nav-button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 0 1rem;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-button:hover,
+.nav-button:focus {
+  color: #ffdd57;
+}
+
+/* Hover and focus styles for links */
+.navbar a:hover,
+.navbar a:focus {
+  color: #ffdd57;
+}
+
+/* Active link styling */
+.active {
+  color: #ffdd57;
+}
+
+/* Link underline effect */
+.navbar a::after,
+.nav-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdd57;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover and focus underline animation */
+.navbar a:hover::after,
+.navbar a:focus::after,
+.active::after,
+.nav-button:hover::after,
+.nav-button:focus::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar a,
+  .nav-button {
+    margin: 0.5rem 0;
+  }
+}
