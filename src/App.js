@@ -12,11 +12,13 @@ function App() {
     <Router>
       <Header />
       <div className="content">
+        {/* <HomePage></HomePage> */}
         <Routes>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/article/:id" component={ArticlePage} />
-          <Route path="/login" component={LoginPage} />
-          <Route path="/signup" component={SignupPage} />
+          <Route path="/" element={<HomePage/>} /> 
+          {/* <Route path="/article" element={<ArticlePage/>} /> */}
+          <Route path="/article" element={<ArticlePage/>} />
+          <Route path="/login" element={<LoginPage/>} />
+          <Route path="/signup" element={<SignupPage/>} />
         </Routes>
       </div>
       <Footer />

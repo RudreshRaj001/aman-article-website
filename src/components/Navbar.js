@@ -17,6 +17,7 @@ function Navbar() {
   return (
     <nav className="navbar">
       <NavLink exact to="/" activeClassName="active">Home</NavLink>
+      <NavLink exact to="/article" activeClassName="active">Article</NavLink>
       <button className="nav-button" onClick={openLogin}>Login</button>
       <button className="nav-button" onClick={openSignup}>Signup</button>
 
